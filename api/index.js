@@ -24,8 +24,8 @@ apiRouter.get('/reports', async (req, res) => {
 
         res.send({reports: theReports})
         
-    } catch ({name, message}) {
-        next({name, message})
+    } catch (error) {
+        next(error)
     }
 })
 
